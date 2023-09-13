@@ -8,7 +8,7 @@ while(c <= 15) {
 var c = 2
 do {
     console.log(`${c}`)
-    c*2
+    c+=2
 } while (c<=40) 
 /*estrutura de repetição com teste lógico no final*/
 
