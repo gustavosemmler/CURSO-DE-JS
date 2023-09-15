@@ -1,13 +1,14 @@
 function tabuada() {
     n1 = document.getElementById('in')
-    t1 = document.getElementById('it')
+    item = document.getElementById('it')
 
     if (n1.value.length == 0)  {
         alert('insira um número')
     } else {
-        var n = Number(n1.value)
-        for(n=1; n<=10; n++) {
-            document.createElement('option')
+        let n = Number(n1.value)
+        for(let c=1; c<=10; c++) {
+           let item = document.createElement('option')
+           item.text = `${n} * ${c} = ${n*c}`
             
         }
     }
