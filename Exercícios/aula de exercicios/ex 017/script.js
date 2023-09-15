@@ -1,18 +1,14 @@
-function gerar() {
-    let num = document.getElementById('in')
-    let tab = document.getElementById('it')
-    if (num.value.length == 0) {
-        alert('por favor, digite um numero')
+function tabuada() {
+    n1 = document.getElementById('in')
+    t1 = document.getElementById('it')
+
+    if (n1.value.length == 0)  {
+        alert('insira um número')
     } else {
-        let n = Number(num.value)
-        let c = 0 
-        tab.innerHTML = ''
-        while (c <= 10) {
-            let item = document.createElement('option')
-            item.text = `${n} * ${c} = ${n*c}`
-            item.value = `tab${c}`
-            tab.appendChild(item)
-            c++
+        var n = Number(n1.value)
+        for(n=1; n<=10; n++) {
+            document.createElement('option')
+            
         }
     }
 }
