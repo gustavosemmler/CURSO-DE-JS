@@ -1,33 +1,31 @@
-function somar() {
+function gerar() {
     var n1 = document.getElementById('in1')
     var nf = document.getElementById('inf')
-    var np = document.getElementById('inp')
-    var res = document.querySelector('.res')
-    
-    if(in1.value.length == 0 || inf.value.length == 0 || inp.value.length == 0) {
-        alert("ERRO, faltam dados")
-        res.innerHTML = 'Impossivel contar'
-    } else {
-        res.innerHTML = "contando: </br>"
-        let i = Number(in1.value)
-        let f = Number(inf.value)
-        let p = Number(inp.value)
-        
-        if (p <= 0) {
-            alert('Passo invalido! Considerando PASSO 1')
-            p = 1
-        }
-        if (i < f){
-            for(let c = i; c <= f; c+=p) {
-            res.innerHTML += `${c} \u{1F449}`
-            }
-            
+    var np = document.getElementById('ip')
+    var res = document.getElementById('res')
+        if (n1.value.length == 0 || nf.value.length == 0 || np.value.length == 0) {
+        alert('ERROR, número faltando')
+        res.innerHTML = 'número faltando'
         } else {
-            for(let c = i; c >= f; c-=p) {
-                res.innerHTML += `${c} \u{1F449}`
+            res.innerHTML = 'contando: '
+            let n = Number(n1.value)
+            let f = Number(nf.value)
+            let p = Number(np.value)
+            if (p <= 0) {
+                alert('passo invalido')
+                p = 1
             }
+        
+            if(n < f){
+                for(let c = n; c<=f; c += p) {
+                    res.innerHTML += `${c} `
+                }
+            } else {
+                for(let c = n; c>=f; c -= p) {
+                    res.innerHTML += `${c} `
+                }
+            }
+             
         }
-         res.innerHTML += `\u{1F3C1}`
+        res.innerHTML +=`.` 
     }
-    
-}
